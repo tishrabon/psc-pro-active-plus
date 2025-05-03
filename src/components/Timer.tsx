@@ -77,13 +77,12 @@ const Timer = () => {
       }
 
       // for timer alert
-      if (clockData.sessionsLeft && timeLeft < 6010 && timeLeft > 5000) {
+      if (clockData.sessionsLeft !== null && clockData.sessionsLeft >= 0 && timeLeft < 6010 && timeLeft > 5000) {
         if (clockData.running === "work") {
           doneCall(clockVolume);       
         } else if (clockData.sessionsLeft > 0 && clockData.running === "break") {
           alertCall(clockVolume);
         }
-
       }      
   
       const interval = setInterval(() => {

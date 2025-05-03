@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         <div className="text-[13px] verticalC mt-10">
-          <p>Project Published: 2025 (version: 3.1)</p>
+          {/* <p>Project Published: 2025 (version: 3.1)</p> */}
           <p> © {new Date().getFullYear()} Towhidul Islam Shrabon (tishrabon). All rights reserved.</p>
         </div>
 
