@@ -1,4 +1,3 @@
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -19,7 +18,6 @@
   --deffont: #475569;
   --material: #34d399;
 }
-
 
 html,
 body {
@@ -119,10 +117,10 @@ button {
 
 .authboard {
   width: 80%;
-  max-width: 500px;  
+  max-width: 500px;
   margin: 0 50px;
   border-radius: 5px;
-  padding: 5px 20px;  
+  padding: 5px 20px;
   background-color: var(--second);
   color: var(--deffont);
   text-align: center;
@@ -130,7 +128,7 @@ button {
 
 .authbox {
   width: 80%;
-  max-width: 500px;  
+  max-width: 500px;
   margin: 0 50px;
   box-shadow: 0 0 4px 1px rgb(235, 235, 235);
   border-radius: 5px;
@@ -138,7 +136,7 @@ button {
 }
 
 .active {
-  color:#475569;
+  color: #475569;
 }
 
 .box-shadow {
@@ -175,7 +173,7 @@ button {
 }
 
 .tapButton:hover {
-  box-shadow: inset 0 0 7px .5px #cccccc;
+  box-shadow: inset 0 0 7px 0.5px #cccccc;
   border-radius: 10px;
   transform: scale(0.9, 1.2);
 }

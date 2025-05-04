@@ -2,9 +2,9 @@
 
 Hi! I’m Towhidul Islam Shrabon (you can call me Shrabon, or find me online as **tishrabon**). This project is a focused productivity tool that combines:
 
-* A **customizable Pomodoro timer**
-* A **metronome with adjustable BPM**
-* **Natural ambient sounds** for a calming workspace
+- A **customizable Pomodoro timer**
+- A **metronome with adjustable BPM**
+- **Natural ambient sounds** for a calming workspace
 
 You can control your Pomodoro cycles, adjust tempo, enjoy background sounds, or run them together for the perfect flow—all inside a minimal, intuitive interface.
 
@@ -12,10 +12,10 @@ You can control your Pomodoro cycles, adjust tempo, enjoy background sounds, or 
 
 ## How to Use
 
-* **Customize** your Pomodoro session durations and labels.
-* **Set** your preferred BPM for the metronome and pick your tick sound.
-* **Choose** ambient sounds to shape the atmosphere.
-* Start the clock, toggle the metronome or ambient sounds, and manage sessions using the reset, play/pause, or renew buttons.
+- **Customize** your Pomodoro session durations and labels.
+- **Set** your preferred BPM for the metronome and pick your tick sound.
+- **Choose** ambient sounds to shape the atmosphere.
+- Start the clock, toggle the metronome or ambient sounds, and manage sessions using the reset, play/pause, or renew buttons.
 
 Simple controls, no hassle.
 
@@ -25,8 +25,8 @@ Simple controls, no hassle.
 
 This project is hosted for free, so:
 
-* Audio file sizes are limited.
-* Freesound.org API has request limits. If you hit the limit, ambient sounds may pause until requests reset.
+- Audio file sizes are limited.
+- Freesound.org API has request limits. If you hit the limit, ambient sounds may pause until requests reset.
 
 Thanks for understanding!
 
@@ -36,12 +36,12 @@ Thanks for understanding!
 
 Built with:
 
-* React
-* TypeScript
-* Vite
-* Redux Toolkit + redux-persist
-* TailwindCSS
-* Firebase (auth, login/registration in progress)
+- React
+- TypeScript
+- Vite
+- Redux Toolkit + redux-persist
+- TailwindCSS
+- Firebase (auth, login/registration in progress)
 
 Source code is available via my portfolio.
 
@@ -57,11 +57,11 @@ If you’re interested in collaboration, feedback, or hiring opportunities, plea
 
 ## Connect with Me
 
-* 🌐 [tishrabon.github.io](https://tishrabon.github.io)
-* 💼 [LinkedIn](https://www.linkedin.com/in/tishrabon/)
-* 💻 [GitHub](https://github.com/tishrabon)
-* 🐦 [X / Twitter](https://x.com/tishrabon)
-* 📧 [tishrabon.official@gmail.com](mailto:tishrabon.official@gmail.com)
+- 🌐 [tishrabon.github.io](https://tishrabon.github.io)
+- 💼 [LinkedIn](https://www.linkedin.com/in/tishrabon/)
+- 💻 [GitHub](https://github.com/tishrabon)
+- 🐦 [X / Twitter](https://x.com/tishrabon)
+- 📧 [tishrabon.official@gmail.com](mailto:tishrabon.official@gmail.com)
 
 ---
 
@@ -69,8 +69,8 @@ If you’re interested in collaboration, feedback, or hiring opportunities, plea
 
 Special thanks to:
 
-* **freesound.org** and **zapsplat.com** for audio assets.
-* **deepkickclean.wav by johnnypanic** [License: Attribution 4.0](https://freesound.org/s/21176/)
-* **metronom\_klack.wav by m1rk0** [License: Attribution 3.0](https://freesound.org/s/50070/)
+- **freesound.org** and **zapsplat.com** for audio assets.
+- **deepkickclean.wav by johnnypanic** [License: Attribution 4.0](https://freesound.org/s/21176/)
+- **metronom_klack.wav by m1rk0** [License: Attribution 3.0](https://freesound.org/s/50070/)
 
 Thank you for checking out this project!

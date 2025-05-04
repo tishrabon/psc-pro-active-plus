@@ -15,7 +15,7 @@ createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <PersistGate loading={null} persistor={persistor}>
           <App />
-        </PersistGate>        
+        </PersistGate>
       </BrowserRouter>
     </Provider>
   </StrictMode>,

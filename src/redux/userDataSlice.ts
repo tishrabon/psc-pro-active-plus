@@ -2,32 +2,34 @@ import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import { db } from "../config/firebase";
 import { getDoc, doc } from "firebase/firestore";
 
-export const fetchUSERDATA = createAsyncThunk("fetchUserData", async (uid: string) => {
-  try {
-    const userDoc = await getDoc(doc(db, "userData", uid));
-    if (userDoc.exists()) {
-      return userDoc.data() as UserDatabase;
-    } else {
-      throw new Error("Something is wrong, Try Again..");
+export const fetchUSERDATA = createAsyncThunk(
+  "fetchUserData",
+  async (uid: string) => {
+    try {
+      const userDoc = await getDoc(doc(db, "userData", uid));
+      if (userDoc.exists()) {
+        return userDoc.data() as UserDatabase;
+      } else {
+        throw new Error("Something is wrong, Try Again..");
+      }
+    } catch (error) {
+      throw error;
     }
-  } catch (error) {
-    throw error;
-  }
-
-});
+  },
+);
 
 export interface UserDatabase {
   uid: string;
   name: string;
   mail: string;
-  complete: boolean;   
+  complete: boolean;
 }
 
 export interface UserData {
   userDatabase: UserDatabase;
-  loggedIn: boolean; 
+  loggedIn: boolean;
   loading?: boolean;
-  loadingError?: string | null;  
+  loadingError?: string | null;
 }
 
 const initialState: UserData = {
@@ -35,12 +37,12 @@ const initialState: UserData = {
     uid: "",
     name: "",
     mail: "",
-    complete: false,    
+    complete: false,
   },
 
   loggedIn: false,
   loading: false,
-}
+};
 
 const userDataSlice = createSlice({
   name: "userData",
@@ -52,12 +54,12 @@ const userDataSlice = createSlice({
 
     resetUSERDATA: (_state, action: PayloadAction<UserData>) => {
       return action.payload;
-    },    
+    },
 
     signupUSER: (state, action: PayloadAction<UserDatabase>) => {
-      state.userDatabase = action.payload;      
-    },   
-    
+      state.userDatabase = action.payload;
+    },
+
     signoutUSER: (state) => {
       state.userDatabase = {
         uid: "",
@@ -70,7 +72,7 @@ const userDataSlice = createSlice({
 
     loggedSTATUS: (state, action: PayloadAction<boolean>) => {
       state.loggedIn = action.payload;
-    }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -79,16 +81,22 @@ const userDataSlice = createSlice({
         console.log("loading...");
       })
       .addCase(fetchUSERDATA.fulfilled, (state, action) => {
-        state.loading = false;        
+        state.loading = false;
         state.userDatabase = action.payload;
         console.log("data stored from firebase", state);
       })
       .addCase(fetchUSERDATA.rejected, (state, action) => {
         state.loading = false;
         state.loadingError = action.error.message || "Execution Failed";
-      })
-  }
+      });
+  },
 });
 
-export const { CUSTOMER, signupUSER, signoutUSER, loggedSTATUS, resetUSERDATA } = userDataSlice.actions;
+export const {
+  CUSTOMER,
+  signupUSER,
+  signoutUSER,
+  loggedSTATUS,
+  resetUSERDATA,
+} = userDataSlice.actions;
 export default userDataSlice.reducer;

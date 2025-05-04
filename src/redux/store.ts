@@ -11,8 +11,8 @@ const migrations = {
     return {
       ...state,
     };
-  }
-}
+  },
+};
 
 // 1. Redux Persist configuration
 const persistConfig = {
@@ -20,7 +20,7 @@ const persistConfig = {
   version: 3,
   storage,
   whitelist: ["userData", "appData"],
-  migrate: createMigrate(migrations, {debug: false})
+  migrate: createMigrate(migrations, { debug: false }),
 };
 
 // 2. Combine reducers
@@ -40,11 +40,10 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: {
         // Ignore actions or paths that are non-serializable
-        ignoredActions: ['persist/PERSIST'], // You can also add specific actions here
-        ignoredPaths: ['register'], // You can add paths that might be non-serializable
+        ignoredActions: ["persist/PERSIST"], // You can also add specific actions here
+        ignoredPaths: ["register"], // You can add paths that might be non-serializable
       },
     }),
-  
 });
 
 // original persistor
