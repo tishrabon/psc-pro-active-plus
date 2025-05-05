@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { Home, Login, Register, Reset, Doc } from "./pages";
 import { Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/reset" element={<Reset />} />
           <Route path="/doc" element={<Doc />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />

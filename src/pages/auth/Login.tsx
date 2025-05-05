@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { IoSunnyOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Notice from "./Notice";
 
 import { loggedSTATUS } from "../../redux/userDataSlice";
 import { useAppDispatch } from "../../hooks/reduxHooks";
@@ -29,6 +30,10 @@ const Login = () => {
 
   return (
     <div className="otherpage-container verticalS mt-[32px] gap-5">
+      <div className="w-full verticalC px-10">
+        <Notice />
+      </div>
+
       <div className="authboard text-white verticalS gap-2">
         <IoSunnyOutline size={50} className="mt-5" />
         <p className="text-[18px]">Good Morning!</p>

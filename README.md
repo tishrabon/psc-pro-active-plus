@@ -6,7 +6,7 @@ Hi! I’m Towhidul Islam Shrabon (you can call me Shrabon, or find me online as 
 - A **metronome with adjustable BPM**
 - **Natural ambient sounds** for a calming workspace
 
-You can control your Pomodoro cycles, adjust tempo, enjoy background sounds, or run them together for the perfect flow—all inside a minimal, intuitive interface.
+You can control your Pomodoro cycles, adjust tempo, enjoy background sounds, or run them together for the perfect flow! All inside a minimal, intuitive interface.
 
 ---
 

@@ -5,6 +5,7 @@ import { useAppDispatch } from "../../hooks/reduxHooks";
 import { db, auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { setDoc, doc } from "firebase/firestore";
+import Notice from "./Notice";
 
 const Register = () => {
   const dispatch = useAppDispatch();
@@ -44,6 +45,10 @@ const Register = () => {
 
   return (
     <div className="otherpage-container verticalS mt-[32px] gap-5">
+      <div className="w-full verticalC px-10">
+        <Notice />
+      </div>
+
       <div className="authboard text-white verticalS gap-2">
         <p className="text-[18px] mt-5">Hey You!</p>
         <p className="">Ready to level up? Join the pro-active crew!</p>
